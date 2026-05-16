@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="citizen.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <i class="fas fa-university"></i>
+            </div>
+            <div>
+                <h1>CITYCONNECT</h1>
+                <p>Portal Logo</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact Support</a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <div class="form-body-card">
+            <h2>Registration</h2>
+            
+            <form action="registration.php" method="POST">
+                
+                <label for="fname">FullName:</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter Your fullname" >
+
+                <label for="regno">RegNo:</label>
+                <input type="text" name="regno" id="regno" placeholder="Enter Your regno" >
+
+                <label for="district">District:</label>
+                <input type="text" name="district" id="district" placeholder="Enter Your District" >
+
+                <label for="nic">NIC:</label>
+                <input type="text" name="nic" id="nic" placeholder="Enter Your NIC" >
+
+                <label for="phone">Phone:</label>
+                <input type="text" name="phone" id="phone" placeholder="Enter Your Phone" >
+
+                <label for="password">Enter Password:</label>
+                <input type="password" name="pwd" id="password" placeholder="Enter Your Password" >
+
+                <label for="vpassword">Re-Enter Password:</label>
+                <input type="password" name="vpwd" id="vpassword" placeholder="Enter Your Re-Enter your Password">
+
+                <div class="btn-group">
+                    <button type="submit" name="submit" onclick="showMessage()">Submit</button>
+                    <button type="button" name="cancel" onclick="window.location.href='../main.html'">Cancel</button>
+                </div>
+                
+                <a href="login.html">Already have an Account? Login</a>
+
+            </form>
+        </div>
+    </div>
+<script src="registration.js"></script>
+</body>
+</html>

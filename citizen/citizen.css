@@ -1,0 +1,231 @@
+/* ==========================================================================
+   New Part: Top Navigation Header Styles
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    position: fixed; /* Keeps the header pinned to the top of the viewport */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays on top of the background image layers */
+}
+
+/* Header Text Adjustments */
+header h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 10px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Navigation Links inside the header block */
+header nav {
+    display: flex;
+    gap: 24px;
+}
+
+header nav a {
+    color: #475569 !important; /* Forces color profile over card links */
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 0 !important; /* Removes default layout margins */
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #2563eb !important; /* Highlights blue on hover */
+    text-decoration: none;
+}
+
+/* Push down container to avoid hidden content underneath fixed header */
+.form-container {
+    margin-top: 90px; 
+}
+/* ==========================================================================
+   Global Reset & Main Outer Background Image
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* The main screen background displays the image with a dark overlay */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   Outer Form Framework (Centered & Translucent)
+   ========================================================================== */
+.form-container {
+    width: 100%;
+    max-width: 400px;      /* Decreased from 460px to make the card much narrower */
+    text-align: center;
+    animation: fadeIn 0.4s ease-out;
+}
+/* Page heading styled for clean visibility over dark image background */
+/* Decreased heading size and margin to save vertical space */
+.form-container h2 {
+    color: #000000;
+    margin-bottom: 16px;   /* Reduced from 24px */
+    font-size: 22px;       /* Reduced from 26px */
+    font-weight: 700;
+    text-align:center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Inner Input Container Only (The White Floating Card Block)
+   ========================================================================== */
+.form-body-card {
+    background-color: #ffffff;
+    padding: 15px 25px;    /* Decreased from 35px 30px to pull inputs tighter together */
+    border-radius: 15px;   /* Slightly tighter border radius to match the smaller footprint */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   Inputs & Labels
+   ========================================================================== */
+label {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Reduces space under each input so the long registration form stays compact */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;    /* Decreased slightly from 12px 14px */
+    margin-bottom: 12px;   /* Decreased from 20px to bring elements closer vertically */
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;       /* Slightly smaller text for scaling */
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Forgot Password / Register Redirect Links */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* ==========================================================================
+   Uniform Control Buttons (Identical Sizes)
+   ========================================================================== */
+/* Tighter spacing for the buttons at the bottom */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+    width: 100%;
+}
+
+button {
+    width:100%;
+    padding: 12px;         /* Decreased from 14px to make buttons more compact */
+    font-size: 13px;       /* Balanced font size */
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Submit Style Uniform Color */
+button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+button[type="submit"]:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 6px 12px -2px rgba(37, 99, 235, 0.3);
+}
+
+/* Cancel Style Uniform Color */
+button[type="button"], button[name="cancel"] {
+    background-color: #ef4444;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.2);
+}
+
+button[type="button"]:hover, button[name="cancel"]:hover {
+    background-color: #dc2626;
+    box-shadow: 0 6px 12px -2px rgba(239, 68, 68, 0.3);
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityConnect - Municipal Waste Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Linked the separated main CSS here -->
+    <link rel="stylesheet" href="main.css"> 
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="bg-white px-6 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center space-x-2">
+            <div class="text-blue-900">
+                <i class="fas fa-university text-3xl"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-slate-800 leading-tight">CITYCONNECT</h1>
+                <p class="text-xs text-gray-500 uppercase tracking-widest">Portal Logo</p>
+            </div>
+        </div>
+        
+        <nav class="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
+            <a href="#" class="hover:text-blue-600">About</a>
+            <a href="#" class="hover:text-blue-600">FAQ</a>
+            <a href="#" class="hover:text-blue-600">Contact Support</a>
+            <a href="#" class="hover:text-black">Settings</a>
+
+        </nav>
+    </header>
+
+    <main class="p-4 md:p-8">
+        <div class="hero-bg rounded-3xl min-h-[80vh] flex flex-col items-center justify-center px-4 py-12 relative overflow-hidden">
+            
+            <h2 class="text-white text-3xl md:text-5xl font-bold mb-16 text-center tracking-wide uppercase">
+                Municipal Waste Management System
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+                
+                <!-- Citizen Card -->
+                <div class="bg-white rounded-xl p-8 flex flex-col items-center text-center card-shadow">
+                    <div class="mb-6 h-24 flex items-center">
+                        <i class="fas fa-users text-6xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Citizen Login</h3>
+                    <p class="text-gray-600 mb-8 flex-grow">Access your personal civic services</p>
+                    
+                    <button onclick="window.location.href='citizen/login.html'" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition uppercase">
+                        Log In
+                    </button><br>
+                    <button onclick="window.location.href='citizen/registration.html'" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition uppercase">
+                        Register
+                    </button>
+                    
+                </div>
+
+                <!-- Worker Card -->
+                <div class="bg-white rounded-xl p-8 flex flex-col items-center text-center card-shadow">
+                    <div class="mb-6 h-24 flex items-center">
+                        <i class="fas fa-hard-hat text-6xl text-orange-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Worker Login</h3>
+                    <p class="text-gray-600 mb-8 flex-grow">Manage daily tasks & reports</p>
+                    <button onclick="window.location.href='login/login_form.php'" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition uppercase">
+                        Log In
+                    </button>
+                </div>
+
+                <!-- Administrator Card -->
+                <div class="bg-white rounded-xl p-8 flex flex-col items-center text-center card-shadow">
+                    <div class="mb-6 h-24 flex items-center">
+                        <i class="fas fa-cogs text-6xl text-slate-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Administrator Login</h3>
+                    <p class="text-gray-600 mb-8 flex-grow">System oversight & configuration</p>
+                    <button onclick="window.location.href='login/login_form.php'" class="w-full bg-slate-900 hover:bg-black text-white font-bold py-3 px-6 rounded-lg transition uppercase">
+                        Log In
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="px-8 py-10 text-gray-600">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
+            <div class="space-y-4">
+                <a href="#" class="block hover:underline">Contact us</a>
+                <div class="flex space-x-6 text-sm font-medium pt-4">
+                    <a href="#" class="hover:text-black">Terms of Service</a>
+                    <a href="#" class="hover:text-black">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="text-right space-y-4">
+                <nav class="flex flex-wrap justify-end gap-x-6 gap-y-2 text-sm font-medium">
+                    <a href="#" class="hover:text-black">Consultation</a>
+                </nav>
+                <p class="text-sm">Copyright © 2026 Mboto Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
