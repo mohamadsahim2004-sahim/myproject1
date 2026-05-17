@@ -29,12 +29,12 @@
         <div class="form-body-card">
             <h2>Registration</h2>
             
-            <form action="registration.php" method="POST">
+            <form action="registration.php" method="POST" id="reg-form">
                 
                 <label for="fname">FullName:</label>
                 <input type="text" name="fname" id="fname" placeholder="Enter Your fullname" >
 
-                <label for="regno">RegNo:</label>
+                <label for="regno">Reg No:</label>
                 <input type="text" name="regno" id="regno" placeholder="Enter Your regno" >
 
                 <label for="district">District:</label>
@@ -53,7 +53,7 @@
                 <input type="password" name="vpwd" id="vpassword" placeholder="Enter Your Re-Enter your Password">
 
                 <div class="btn-group">
-                    <button type="submit" name="submit" onclick="showMessage()">Submit</button>
+                    <button type="submit" name="submit" id="submit" >Submit</button>
                     <button type="button" name="cancel" onclick="window.location.href='../main.html'">Cancel</button>
                 </div>
                 
